@@ -9,12 +9,8 @@ RUN apt -y install enca dbus npm git
 RUN npm install walderston/h265ize --global --no-optional
 RUN ln -s /usr/local/nvidia/bin/ffmpeg /usr/bin/ffmpeg
 RUN ln -s /usr/local/nvidia/bin/ffprobe /usr/bin/ffprobe
-
-
-RUN apk add --no-cache --update-cache git ffmpeg && \
-    npm install walderston/h265ize --global --no-optional && \
-    mkdir /input && \
-    mkdir /output
+RUN mkdir /input
+RUN mkdir /output
 
 VOLUME ["/input", "/output", "/usr/local/nvidia","/usr/local/NVIDIA_GPU_DRV"]
 WORKDIR /h265ize

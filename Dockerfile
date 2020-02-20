@@ -13,7 +13,7 @@ RUN ln -s /usr/local/nvidia/bin/ffprobe /usr/bin/ffprobe
 
 RUN apk add --no-cache --update-cache git ffmpeg && \
     npm install walderston/h265ize --global --no-optional && \
-    mkdir /input
+    mkdir /input && \
     mkdir /output
 
 VOLUME ["/input", "/output", "/usr/local/nvidia","/usr/local/NVIDIA_GPU_DRV"]

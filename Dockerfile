@@ -1,4 +1,4 @@
-FROM amd64/ubuntu:18.0
+FROM amd64/ubuntu:18.04
 MAINTAINER walderston
 
 ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin

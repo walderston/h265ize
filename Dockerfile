@@ -5,7 +5,7 @@ LABEL h265ize_version="bleading edge" architecture="amd64"
 
 RUN apk add --no-cache --update-cache git ffmpeg && \
     npm install walderston/h265ize --global --no-optional && \
-    mkdir /watch && mkdir /tmp
+    mkdir /watch
 
 VOLUME ["/watch", "/tmp"]
 WORKDIR /h265ize

@@ -11,3 +11,4 @@ VOLUME ["/watch"]
 WORKDIR /h265ize
 
 ENTRYPOINT ["/usr/local/bin/h265ize", "--watch", "/watch", "--delete"]
+

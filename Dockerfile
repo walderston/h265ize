@@ -7,7 +7,7 @@ RUN apk add --no-cache --update-cache git ffmpeg && \
     npm install walderston/h265ize --global --no-optional && \
     mkdir /watch
 
-VOLUME ["/watch", "/tmp"]
+VOLUME ["/watch"]
 WORKDIR /h265ize
 
 ENTRYPOINT ["/usr/local/bin/h265ize", "--watch", "/watch", "--delete"]
